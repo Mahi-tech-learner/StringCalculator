@@ -15,4 +15,8 @@ public class StringCalculatorTest {
 			assertEquals(0, StringCalculator.add(""));
 		}
 
+		@Test
+		public void whenAnyNumberOfNumbersIsUsedThenReturnValuesAreTheirSums() {
+			assertEquals(2+5+6+8+7+4+3+1,StringCalculator.add("2,5,6,8,7,4,3,1"));
+		}
 }
