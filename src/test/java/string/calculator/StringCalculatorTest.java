@@ -53,4 +53,9 @@ public class StringCalculatorTest {
 		public void addMethodCallsCounts() {
 			Assert.assertEquals(2, StringCalculator.GetCalledCount());
 		}
+		
+		@Test
+		public void numberMoreThen1000ThenIgnored() {
+			Assert.assertEquals(3+8+4, StringCalculator.add("3,1002,8,2001,4,1234"));
+		}
 }

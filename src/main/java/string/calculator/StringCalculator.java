@@ -21,7 +21,9 @@ public class StringCalculator {
 				if(numberInt<0) {
 					negativeNumber.add(numberInt);
 				}
-				returnValue += Integer.parseInt(number);
+				if(numberInt<1000) {
+					returnValue += Integer.parseInt(number);
+				}
 			}
 			
 		}		
