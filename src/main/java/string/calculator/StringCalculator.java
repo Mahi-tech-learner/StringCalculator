@@ -37,5 +37,5 @@ public class StringCalculator {
 	
 	public static int GetCalledCount() {
 		return count;
-	}//
+	}//all questions done 
 }

@@ -73,5 +73,5 @@ public class StringCalculatorTest {
 		@Test
 		public void multipleDelimiters() {
 			Assert.assertEquals(6, StringCalculator.add("//[**][%%]\n1**2%%3"));
-		}
+		} //test cases also done
 }
