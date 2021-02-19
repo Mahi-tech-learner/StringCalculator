@@ -58,4 +58,20 @@ public class StringCalculatorTest {
 		public void numberMoreThen1000ThenIgnored() {
 			Assert.assertEquals(3+8+4, StringCalculator.add("3,1002,8,2001,4,1234"));
 		}
+		
+		@Test
+		public void delimiters() {
+			Assert.assertEquals(6, StringCalculator.add("//[***]\n1***2***3"));
+		}
+		
+		
+		@Test
+		public void allowAllDelimiters() {
+			Assert.assertEquals(6, StringCalculator.add("//[*][%]\n1*2%3"));
+		}
+		
+		@Test
+		public void multipleDelimiters() {
+			Assert.assertEquals(6, StringCalculator.add("//[**][%%]\n1**2%%3"));
+		}
 }

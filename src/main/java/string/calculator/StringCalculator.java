@@ -12,10 +12,11 @@ public class StringCalculator {
 		if (numbers.isEmpty()) 
 				return 0;
 		
-		String[] numbersArray = numbers.split("[// \n\t\r.,;:!?(){]");
+		String[] numbersArray = numbers.split("[//* \n\t\r.,;:%!?(){]");
 		List negativeNumber =new  ArrayList();
 		for(String number:numbersArray) {
-			
+			number = number.replace("[", "");
+			number = number.replace("]", "");
 			if(!number.trim().isEmpty()) {
 				int numberInt = Integer.parseInt(number.trim());
 				if(numberInt<0) {
