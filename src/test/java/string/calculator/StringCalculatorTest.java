@@ -47,5 +47,10 @@ public class StringCalculatorTest {
 		    Assert.assertEquals("Negatives not allowed: [-6, -18]", exception.getMessage());
 		}
 		
-
+		
+		
+		@Test
+		public void addMethodCallsCounts() {
+			Assert.assertEquals(2, StringCalculator.GetCalledCount());
+		}
 }
