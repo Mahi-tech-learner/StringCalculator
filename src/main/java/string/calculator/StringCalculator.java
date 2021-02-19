@@ -8,7 +8,7 @@ public class StringCalculator {
 		if (numbers.isEmpty()) 
 				return 0;
 		
-		String[] numbersArray = numbers.split(",");
+		String[] numbersArray = numbers.split(",|\n");
 			
 		for(String number:numbersArray) {
 			if(!number.trim().isEmpty()) {

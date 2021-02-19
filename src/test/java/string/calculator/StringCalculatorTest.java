@@ -19,4 +19,9 @@ public class StringCalculatorTest {
 		public void whenAnyNumberOfNumbersIsUsedThenReturnValuesAreTheirSums() {
 			assertEquals(2+5+6+8+7+4+3+1,StringCalculator.add("2,5,6,8,7,4,3,1"));
 		}
+		
+		@Test
+		public void whenNewLineIsUsedBetweenNumbersThenReturnValuesAreTheirSums() {
+			assertEquals(3+6+15, StringCalculator.add("3,6\n15"));
+		}
 }
